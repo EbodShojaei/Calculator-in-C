@@ -51,23 +51,25 @@ void getNum(int *operand_a, int *operand_b) {
 	// Prompt user to enter first operand.
 	printf("Enter a number (0 - 9999)\n");
 	int input_a = scanf("%d", operand_a);
+	clearInput();
 
 	// Error handle invalid operand.
 	while (input_a != 1 || abs(*operand_a) > 9999) {
 		printf("Invalid number.\nEnter a number (0 - 9999).\n");
-		clearInput();
 		input_a = scanf("%d", operand_a);
+		clearInput();
 	}
 	
 	// Prompt user to enter next operand.
 	printf("Enter another number (0 - 9999)\n");
 	int input_b = scanf("%d", operand_b);
+	clearInput();
 
 	// Error handle invalid operand.
 	while (input_b != 1 || abs(*operand_b) > 9999) {
 		printf("Invalid number.\nEnter another number (0 - 9999).\n");
-		clearInput();
 		input_b = scanf("%d", operand_b);
+		clearInput();
 	}
 }
 
